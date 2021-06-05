@@ -1,13 +1,35 @@
 #app {
-  width: calc(750pt - 180pt);
-  max-width: 100vw;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 0 16pt;
-  box-sizing: border-box;
-  position: relative;
+  /*width: calc(750pt - 180pt);*/
+  /*max-width: 100vw;*/
+  /*min-height: 100vh;*/
+  /*margin: 0 auto;*/
+  /*padding: 0 16pt;*/
+  /*box-sizing: border-box;*/
+  /*position: relative;*/
+}
+input::-webkit-input-placeholder { /* WebKit browsers */
+
+  color: #808080;
+
 }
 
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+
+  color: #808080;
+
+}
+
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+
+  color: #808080;
+
+}
+
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+
+  color: #808080;
+
+}
 p {
   font-size: 14px;
 }

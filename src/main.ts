@@ -18,10 +18,10 @@ const main = async () => {
         ((document.querySelector('#text_exchange') as HTMLElement).innerHTML = "exchange");
         ((document.querySelector('#transaction') as HTMLElement).innerHTML = "IDO");
         ((document.querySelector('#content_1') as HTMLElement).innerHTML = "KB token rule");
-        ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· Enter imToken / tokenpocket App wallet, switch to Binance Smart Chain, visit kbtoken.co");
+        ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· Enter TokenPocket App wallet, switch to Binance Smart Chain, visit kbtoken.co");
         ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· proportion of early sales1 BNB = 10000KB，The sale is completed or the end of time condition is reached");
         ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN Contract address：0x41Bd027798aF533D12a7B514F32a24d574387836");
-        ((document.querySelector('#content_5') as HTMLElement).innerHTML = "ETH wallet address");
+        ((document.querySelector('#content_5') as HTMLElement).innerHTML = "BSC wallet address");
         ((document.querySelector('#address_eth') as HTMLElement).innerHTML = "please connect the wallet address...");
         ((document.querySelector('#airdrop') as HTMLElement).innerHTML = "receive drop");
         ((document.querySelector('#content_6') as HTMLElement).innerHTML = "KBtoken rule");
@@ -305,7 +305,7 @@ app.innerHTML = `
     <section id="kongtou" style=" width: calc(750pt - 180pt);max-width: 100vw;min-height: 100vh;margin: 0 auto;padding: 0 16pt;box-sizing: border-box;position: relative;background: black">
       <div style="height: 40px"></div>
       <div id="content_5" style="width: 256px;height: 25px;font-size: 18px;font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;font-weight: 400 ;color: #FFFFFF;line-height: 28px;">
-        ETH wallet address
+        BSC wallet address
       </div>
       <div style="height: 15px"></div>
 

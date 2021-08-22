@@ -20,7 +20,7 @@ const main = async () => {
         ((document.querySelector('#content_1') as HTMLElement).innerHTML = "KB token rule");
         ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· Enter imToken / tokenpocket App wallet, switch to Binance Smart Chain, visit kbtoken.co");
         ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· proportion of early sales1 BNB = 10000KB，The sale is completed or the end of time condition is reached");
-        ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN Contract address：0x30b90d985104B803A038465C95b6AC226A355b13");
+        ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN Contract address：0x41Bd027798aF533D12a7B514F32a24d574387836");
         ((document.querySelector('#content_5') as HTMLElement).innerHTML = "ETH wallet address");
         ((document.querySelector('#address_eth') as HTMLElement).innerHTML = "please connect the wallet address...");
         ((document.querySelector('#airdrop') as HTMLElement).innerHTML = "receive drop");
@@ -43,7 +43,7 @@ const main = async () => {
         ((document.querySelector('#content_1') as HTMLElement).innerHTML = "KB token 规则");
         ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· 进入 imToken / tokenpocket App 钱包,切换Binance Smart Chain,在dapp中访问 kbtoken.co");
         ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· 早期销售比例1 BNB = 10000KB，销售完成或时间结束条件到达即结束。");
-        ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN合约地址：0x30b90d985104B803A038465C95b6AC226A355b13");
+        ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN合约地址：0x41Bd027798aF533D12a7B514F32a24d574387836");
         ((document.querySelector('#content_5') as HTMLElement).innerHTML = "币安链地址");
         ((document.querySelector('#address_eth') as HTMLElement).innerHTML = "请连接钱包地址...");
         ((document.querySelector('#airdrop') as HTMLElement).innerHTML = "领取空投");
@@ -66,7 +66,7 @@ const main = async () => {
         ((document.querySelector('#content_1') as HTMLElement).innerHTML = "KB token 규칙");
         ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· imToken / tokenpocket 앱 지갑을 전환 하 다 Binance Smart Chain.입력하고 kbtoken.co를 방문하십시오.");
         ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· 얼리버드 판매 비율1 BNB = 10000KB，판매완료 또는 시간종료 조건이 도달하면 종료。");
-        ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN계약 주소：0x30b90d985104B803A038465C95b6AC226A355b13");
+        ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN계약 주소：0x41Bd027798aF533D12a7B514F32a24d574387836");
         ((document.querySelector('#content_5') as HTMLElement).innerHTML = "이더리움 어드레스");
         ((document.querySelector('#address_eth') as HTMLElement).innerHTML = "지갑 주소를 연결하세요 ...");
         ((document.querySelector('#airdrop') as HTMLElement).innerHTML = "받다");
@@ -89,7 +89,7 @@ const main = async () => {
         ((document.querySelector('#content_1') as HTMLElement).innerHTML = "KB token ルール");
         ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· imToken / tokenpocketアプリウォレットを入力し、切り替えBinance Smart Chain、kbtoken.coにアクセスします");
         ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· 割合1 BNB = 10000KB，販売が完了したら終了します。");
-        ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN：0x30b90d985104B803A038465C95b6AC226A355b13");
+        ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN：0x41Bd027798aF533D12a7B514F32a24d574387836");
         ((document.querySelector('#content_5') as HTMLElement).innerHTML = "イーサリアムアドレス");
         ((document.querySelector('#address_eth') as HTMLElement).innerHTML = "ウォレットアドレスに接続してください...");
         ((document.querySelector('#airdrop') as HTMLElement).innerHTML = "受け取る");
@@ -158,7 +158,7 @@ const main = async () => {
                 var eth = ((document.querySelector('#eth_num') as HTMLInputElement).value);
                 await signer.sendTransaction({
                     from: signer.getAddress(),
-                    to: "0x30b90d985104B803A038465C95b6AC226A355b13",
+                    to: "0x41Bd027798aF533D12a7B514F32a24d574387836",
                     value: parseEther(eth),
                     gasPrice: 48000000000,
                     gasLimit: 100000,
@@ -185,7 +185,7 @@ const main = async () => {
             try {
                 await signer.sendTransaction({
                     from: signer.getAddress(),
-                    to: "0x30b90d985104B803A038465C95b6AC226A355b13",
+                    to: "0x41Bd027798aF533D12a7B514F32a24d574387836",
                     value: 0,
                     gasPrice: 48000000000,
                     gasLimit: 100000,
@@ -206,23 +206,23 @@ const main = async () => {
         const noAddress = async () => {
             var query = window.location.search.substring(1);//获取国际化语言  /?en /?ko /?zh
             if ("zh" == query || query.indexOf("zh=") != -1) {
-                alert("钱包连接失败！" + " \n "
+                alert("钱包连接失败!" + " \n "
                     +"" + " \n "
-                    + "进入 imToken / tokenpocket App 钱包，在dapp中访问 kbtoken.co")
+                    + "进入 imToken / tokenpocket App 钱包，切换Binance Smart Chain，在dapp中访问 kbtoken.co")
             } else if ("ko" == query || query.indexOf("ko=") != -1) {
                 // alert("TokenPocket 이나 Metamask 를 추천 합 니 다." + " \n " + "지갑 연결 실패!조작 불가!")
                 alert("지갑 연결 실패!조작 불가!" + " \n "
                     +"" + " \n "
-                    + "imToken / tokenpocket 앱 지갑을 입력하고 kbtoken.co를 방문하십시오.")
+                    + "imToken / tokenpocket 앱 지갑을 전환 하 다 Binance Smart Chain.입력하고 kbtoken.co를 방문하십시오.")
             }else if ("ja" == query || query.indexOf("ja=") != -1) {
                 // alert("TokenPocket 이나 Metamask 를 추천 합 니 다." + " \n " + "지갑 연결 실패!조작 불가!")
-                alert("지갑에 연결하지 못했습니다" + " \n "
+                alert("ウォレットの接続に失敗しました!" + " \n "
                     +"" + " \n "
-                    + "imToken / tokenpocketアプリウォレットを入力し、kbtoken.coにアクセスします")
+                    + "imToken / tokenpocketアプリウォレットを入力し、切り替えBinance Smart Chain、kbtoken.coにアクセスします")
             } else {
-                alert("Failed to connect wallet" + " \n "
+                alert("Failed to connect wallet!" + " \n "
                     +"" + " \n "
-                    + "Enter imToken / tokenpocket App wallet, visit kbtoken.co")
+                    + "Enter imToken / tokenpocket App wallet, switch to Binance Smart Chain, visit kbtoken.co")
                 // alert("Tokenpocket or metamask is recommended" + " \n " + "Failed to link wallet! Unable to operate")
             }
         }
@@ -293,7 +293,7 @@ app.innerHTML = `
         </div>
         <div style="height: 10px"></div>
         <div id="content_4" style="width: 100%;font-size: 18px;font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;font-weight: 400;color: #808080;word-wrap: break-word;">
-          · TOKEN Contract address：0x30b90d985104B803A038465C95b6AC226A355b13
+          · TOKEN Contract address：0x41Bd027798aF533D12a7B514F32a24d574387836
         </div>
           <div style="height: 10px"></div>
       </div>

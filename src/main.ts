@@ -10,6 +10,12 @@ const main = async () => {
 
     // await (window as any).ethereum.enable()
     var query = window.location.search.substring(1);//获取国际化语言  /?en /?ko /?zh
+    let tp = require('./tp-js-sdk');
+    console.log(tp.isConnected());
+    let walletTypes = ['bsc'];
+    let switchWallet = false;
+    let result = tp.getWallet(walletTypes, switchWallet).then(console.log)
+    alert(result);
     if ("en" == query || query.indexOf("en=") != -1) {
         ((document.querySelector('#headAirdrop') as HTMLElement).innerHTML = "Drop");
         ((document.querySelector('#headPrivate') as HTMLElement).innerHTML = "IDO");
@@ -368,7 +374,10 @@ app.innerHTML = `
     </section>
   </div>
 </div>
-
+<!--<script src="./dist/tp.js"></script>-->
+<!--<script>-->
+<!--    console.log(tp.isConnected());-->
+<!--</script>-->
 `
 main().catch(err => console.log(err))
 

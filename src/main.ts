@@ -18,8 +18,8 @@ const main = async () => {
         ((document.querySelector('#text_exchange') as HTMLElement).innerHTML = "exchange");
         ((document.querySelector('#transaction') as HTMLElement).innerHTML = "IDO");
         ((document.querySelector('#content_1') as HTMLElement).innerHTML = "KB token rule");
-        ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· Enter imToken / tokenpocket App wallet, visit kbtoken.co");
-        ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· proportion of early sales1 ETH = 10000KB，The sale is completed or the end of time condition is reached");
+        ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· Enter imToken / tokenpocket App wallet, switch to Binance Smart Chain, visit kbtoken.co");
+        ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· proportion of early sales1 BNB = 10000KB，The sale is completed or the end of time condition is reached");
         ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN Contract address：0x30b90d985104B803A038465C95b6AC226A355b13");
         ((document.querySelector('#content_5') as HTMLElement).innerHTML = "ETH wallet address");
         ((document.querySelector('#address_eth') as HTMLElement).innerHTML = "please connect the wallet address...");
@@ -41,10 +41,10 @@ const main = async () => {
         ((document.querySelector('#text_exchange') as HTMLElement).innerHTML = "兑换");
         ((document.querySelector('#transaction') as HTMLElement).innerHTML = "IDO");
         ((document.querySelector('#content_1') as HTMLElement).innerHTML = "KB token 规则");
-        ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· 进入 imToken / tokenpocket App 钱包，在dapp中访问 kbtoken.co");
-        ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· 早期销售比例1 ETH = 10000KB，销售完成或时间结束条件到达即结束。");
+        ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· 进入 imToken / tokenpocket App 钱包,切换Binance Smart Chain,在dapp中访问 kbtoken.co");
+        ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· 早期销售比例1 BNB = 10000KB，销售完成或时间结束条件到达即结束。");
         ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN合约地址：0x30b90d985104B803A038465C95b6AC226A355b13");
-        ((document.querySelector('#content_5') as HTMLElement).innerHTML = "以太坊地址");
+        ((document.querySelector('#content_5') as HTMLElement).innerHTML = "币安链地址");
         ((document.querySelector('#address_eth') as HTMLElement).innerHTML = "请连接钱包地址...");
         ((document.querySelector('#airdrop') as HTMLElement).innerHTML = "领取空投");
         ((document.querySelector('#content_6') as HTMLElement).innerHTML = "KBtoken 规则");
@@ -64,8 +64,8 @@ const main = async () => {
         ((document.querySelector('#text_exchange') as HTMLElement).innerHTML = "거래");
         ((document.querySelector('#transaction') as HTMLElement).innerHTML = "IDO");
         ((document.querySelector('#content_1') as HTMLElement).innerHTML = "KB token 규칙");
-        ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· imToken / tokenpocket 앱 지갑을 입력하고 kbtoken.co를 방문하십시오.");
-        ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· 얼리버드 판매 비율1 ETH = 10000KB，판매완료 또는 시간종료 조건이 도달하면 종료。");
+        ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· imToken / tokenpocket 앱 지갑을 전환 하 다 Binance Smart Chain.입력하고 kbtoken.co를 방문하십시오.");
+        ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· 얼리버드 판매 비율1 BNB = 10000KB，판매완료 또는 시간종료 조건이 도달하면 종료。");
         ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN계약 주소：0x30b90d985104B803A038465C95b6AC226A355b13");
         ((document.querySelector('#content_5') as HTMLElement).innerHTML = "이더리움 어드레스");
         ((document.querySelector('#address_eth') as HTMLElement).innerHTML = "지갑 주소를 연결하세요 ...");
@@ -87,8 +87,8 @@ const main = async () => {
         ((document.querySelector('#text_exchange') as HTMLElement).innerHTML = "トランザクション");
         ((document.querySelector('#transaction') as HTMLElement).innerHTML = "IDO");
         ((document.querySelector('#content_1') as HTMLElement).innerHTML = "KB token ルール");
-        ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· imToken / tokenpocketアプリウォレットを入力し、kbtoken.coにアクセスします");
-        ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· 割合1 ETH = 10000KB，販売が完了したら終了します。");
+        ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· imToken / tokenpocketアプリウォレットを入力し、切り替えBinance Smart Chain、kbtoken.coにアクセスします");
+        ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· 割合1 BNB = 10000KB，販売が完了したら終了します。");
         ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN：0x30b90d985104B803A038465C95b6AC226A355b13");
         ((document.querySelector('#content_5') as HTMLElement).innerHTML = "イーサリアムアドレス");
         ((document.querySelector('#address_eth') as HTMLElement).innerHTML = "ウォレットアドレスに接続してください...");
@@ -107,24 +107,21 @@ const main = async () => {
     } catch (err) {
         var query = window.location.search.substring(1);//获取国际化语言  /?en /?ko /?zh
         if ("zh" == query || query.indexOf("zh=") != -1) {
-            alert("钱包连接失败！" + " \n "
+            alert("钱包连接失败!" + " \n "
             +"" + " \n "
-            + "进入 imToken / tokenpocket App 钱包，在dapp中访问 kbtoken.co")
+            + "进入 imToken / tokenpocket App 钱包，切换Binance Smart Chain，在dapp中访问 kbtoken.co")
         } else if ("ko" == query || query.indexOf("ko=") != -1) {
-            // alert("TokenPocket 이나 Metamask 를 추천 합 니 다." + " \n " + "지갑 연결 실패!조작 불가!")
             alert("지갑 연결 실패!조작 불가!" + " \n "
                 +"" + " \n "
-                + "imToken / tokenpocket 앱 지갑을 입력하고 kbtoken.co를 방문하십시오.")
+                + "imToken / tokenpocket 앱 지갑을 전환 하 다 Binance Smart Chain.입력하고 kbtoken.co를 방문하십시오.")
         }else if ("ja" == query || query.indexOf("ja=") != -1) {
-            // alert("TokenPocket 이나 Metamask 를 추천 합 니 다." + " \n " + "지갑 연결 실패!조작 불가!")
-            alert("지갑에 연결하지 못했습니다" + " \n "
+            alert("ウォレットの接続に失敗しました!" + " \n "
                 +"" + " \n "
-                + "imToken / tokenpocketアプリウォレットを入力し、kbtoken.coにアクセスします")
+                + "imToken / tokenpocketアプリウォレットを入力し、切り替えBinance Smart Chain、kbtoken.coにアクセスします")
         } else {
-            alert("Failed to connect wallet" + " \n "
+            alert("Failed to connect wallet!" + " \n "
                 +"" + " \n "
-                + "Enter imToken / tokenpocket App wallet, visit kbtoken.co")
-            // alert("Tokenpocket or metamask is recommended" + " \n " + "Failed to link wallet! Unable to operate")
+                + "Enter imToken / tokenpocket App wallet, switch to Binance Smart Chain, visit kbtoken.co")
         }
     }
     const switchToAirdrop = async () => {
@@ -262,7 +259,7 @@ app.innerHTML = `
         <input type="text"  style="height: 100%;width: 100%;background: transparent;border:none;font-weight: 400;color: #FFFFFF;font-size: 20px"
                placeholder="Please enter your amount"  onkeyup="this.value= this.value.match(/\\d+(\\.\\d{0,8})?/) ? this.value.match(/\\d+(\\.\\d{0,8})?/)[0] : ''" id="eth_num"  value="">
 
-        <div style=";font-size: 20px;font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;font-weight: 400;color: #FFFFFF;margin-top: -35px" align="right">ETH</div>
+        <div style=";font-size: 20px;font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;font-weight: 400;color: #FFFFFF;margin-top: -35px" align="right">BNB</div>
       </div>
       <div style="height: 15px"></div>
       <div id="text_exchange" style="width: 56px;height: 25px;font-size: 18px;font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;font-weight: 400;color: #FFFFFF;line-height: 28px;">
@@ -292,7 +289,7 @@ app.innerHTML = `
         </div>
          <div style="height: 10px"></div>
         <div id="content_3" style="width: 100%;font-size: 18px;font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;font-weight: 400;color: #808080;">
-          · proportion of early sales1 ETH = 10000KB，The sale is completed or the end of time condition is reached
+          · proportion of early sales1 BNB = 10000KB，The sale is completed or the end of time condition is reached
         </div>
         <div style="height: 10px"></div>
         <div id="content_4" style="width: 100%;font-size: 18px;font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;font-weight: 400;color: #808080;word-wrap: break-word;">

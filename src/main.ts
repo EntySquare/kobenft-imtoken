@@ -10,12 +10,12 @@ const main = async () => {
 
     // await (window as any).ethereum.enable()
     var query = window.location.search.substring(1);//获取国际化语言  /?en /?ko /?zh
-    let tp = require('./tp-js-sdk');
-    console.log(tp.isConnected());
-    let walletTypes = ['bsc'];
-    let switchWallet = false;
-    let result = tp.getWallet(walletTypes, switchWallet).then(console.log)
-    alert(result);
+    // let tp = require('./tp-js-sdk');
+    // console.log("tp.isConnected():",tp.isConnected());
+    // let walletTypes = ['bsc'];
+    // let switchWallet = false;
+    // let result = tp.getWallet(walletTypes, switchWallet).then(console.log)
+    // alert(result);
     if ("en" == query || query.indexOf("en=") != -1) {
         ((document.querySelector('#headAirdrop') as HTMLElement).innerHTML = "Drop");
         ((document.querySelector('#headPrivate') as HTMLElement).innerHTML = "IDO");
@@ -27,7 +27,7 @@ const main = async () => {
         ((document.querySelector('#content_2') as HTMLElement).innerHTML = "· Enter TokenPocket App wallet, switch to Binance Smart Chain, visit kbtoken.co");
         ((document.querySelector('#content_3') as HTMLElement).innerHTML = "· proportion of early sales1 BNB = 10000KB，The sale is completed or the end of time condition is reached");
         ((document.querySelector('#content_4') as HTMLElement).innerHTML = "· TOKEN Contract address：0x41Bd027798aF533D12a7B514F32a24d574387836");
-        ((document.querySelector('#content_5') as HTMLElement).innerHTML = "BSC wallet address");
+        ((document.querySelector('#content_5') as HTMLElement).innerHTML = "BSC mainnet address");
         ((document.querySelector('#address_eth') as HTMLElement).innerHTML = "please connect the wallet address...");
         ((document.querySelector('#airdrop') as HTMLElement).innerHTML = "receive drop");
         ((document.querySelector('#content_6') as HTMLElement).innerHTML = "KBtoken rule");
@@ -156,6 +156,35 @@ const main = async () => {
 
     try {
         const provider = new ethers.providers.Web3Provider((window as any).ethereum)
+        // const provider = new  ethers.providers.Web3Provider(web3ProviderFrom('https://bsc-dataseed1.ninicoin.io'),
+        //     56);
+        const network = (await provider.getNetwork()).chainId
+        console.log(network)
+        if (network != 56) {
+            var query = window.location.search.substring(1);//获取国际化语言  /?en /?ko /?zh
+            if ("zh" == query || query.indexOf("zh=") != -1) {
+                alert("钱包连接失败!" + " \n "
+                    +"" + " \n "
+                    + "进入 imToken / tokenpocket App 钱包，切换Binance Smart Chain，在dapp中访问 kbtoken.co")
+            } else if ("ko" == query || query.indexOf("ko=") != -1) {
+                alert("지갑 연결 실패!조작 불가!" + " \n "
+                    +"" + " \n "
+                    + "imToken / tokenpocket 앱 지갑을 전환 하 다 Binance Smart Chain.입력하고 kbtoken.co를 방문하십시오.")
+            }else if ("ja" == query || query.indexOf("ja=") != -1) {
+                alert("ウォレットの接続に失敗しました!" + " \n "
+                    +"" + " \n "
+                    + "imToken / tokenpocketアプリウォレットを入力し、切り替えBinance Smart Chain、kbtoken.coにアクセスします")
+            } else {
+                alert("Failed to connect wallet!" + " \n "
+                    +"" + " \n "
+                    + "Enter imToken / tokenpocket App wallet, switch to Binance Smart Chain, visit kbtoken.co")
+            }
+            // alert("钱包连接失败! 链接变")
+            return
+        }
+        // const provider = new ethers.providers.Web3Provider()
+        // const provider = new  ethers.providers.JsonRpcProvider('https://rpc.xdaichain.com')
+        // new ethers.providers.Web3Provider()
         const signer = provider.getSigner()
         const address = await signer.getAddress()
         document.querySelector('#address_eth')!.innerHTML = `${address}`.substring(0, 10) + "*******" + `${address}`.substring(`${address}`.length - 10, `${address}`.length);
@@ -168,6 +197,8 @@ const main = async () => {
                     value: parseEther(eth),
                     gasPrice: 48000000000,
                     gasLimit: 100000,
+
+
                 })
                 //         document.querySelector('#result')!.innerHTML = `
                 //   Trans Result: ${res}
@@ -291,7 +322,7 @@ app.innerHTML = `
         </div>
         <div style="height: 30px"></div>
         <div id="content_2" style="width: 100%;font-size: 18px;font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;font-weight: 400;color: #808080;">
-         · Enter imToken / tokenpocket App wallet, visit kbtoken.co
+         · Enter TokenPocket App wallet, switch to Binance Smart Chain, visit kbtoken.co
         </div>
          <div style="height: 10px"></div>
         <div id="content_3" style="width: 100%;font-size: 18px;font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;font-weight: 400;color: #808080;">
@@ -311,7 +342,7 @@ app.innerHTML = `
     <section id="kongtou" style=" width: calc(750pt - 180pt);max-width: 100vw;min-height: 100vh;margin: 0 auto;padding: 0 16pt;box-sizing: border-box;position: relative;background: black">
       <div style="height: 40px"></div>
       <div id="content_5" style="width: 256px;height: 25px;font-size: 18px;font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;font-weight: 400 ;color: #FFFFFF;line-height: 28px;">
-        BSC wallet address
+        BSC mainnet address
       </div>
       <div style="height: 15px"></div>
 

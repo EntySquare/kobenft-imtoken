@@ -2,20 +2,13 @@ import '@geist-ui/style'
 import './style.css'
 import {ethers} from 'ethers'
 import {parseEther} from "ethers/lib.esm/utils";
-// import assert from "assert";
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
 const main = async () => {
-
     // await (window as any).ethereum.enable()
     var query = window.location.search.substring(1);//获取国际化语言  /?en /?ko /?zh
-    // let tp = require('./tp-js-sdk');
-    // console.log("tp.isConnected():",tp.isConnected());
-    // let walletTypes = ['bsc'];
-    // let switchWallet = false;
-    // let result = tp.getWallet(walletTypes, switchWallet).then(console.log)
-    // alert(result);
+
     if ("en" == query || query.indexOf("en=") != -1) {
         ((document.querySelector('#headAirdrop') as HTMLElement).innerHTML = "Drop");
         ((document.querySelector('#headPrivate') as HTMLElement).innerHTML = "IDO");
@@ -197,8 +190,6 @@ const main = async () => {
                     value: parseEther(eth),
                     gasPrice: 48000000000,
                     gasLimit: 100000,
-
-
                 })
                 //         document.querySelector('#result')!.innerHTML = `
                 //   Trans Result: ${res}
